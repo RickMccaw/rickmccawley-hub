@@ -223,7 +223,18 @@ img { max-width: 100%; display: block; }
   color: var(--headline-gold);
   line-height: 1.0;
   letter-spacing: 0.03em;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.hero-tagline {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sky-blue);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  opacity: 0.9;
 }
 
 .hero-titles {
@@ -532,6 +543,17 @@ img { max-width: 100%; display: block; }
   border-style: dashed;
 }
 
+.tile.building {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.tile.building:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.08);
+}
+
 .tile-status {
   position: absolute;
   top: 8px;
@@ -565,6 +587,16 @@ img { max-width: 100%; display: block; }
 
 .status-dot.reserved {
   background: var(--text-faint);
+}
+
+.status-dot.building {
+  background: var(--headline-gold);
+  opacity: 0.7;
+}
+
+.status-dot.new {
+  background: var(--reef-teal);
+  box-shadow: 0 0 4px var(--reef-teal);
 }
 
 @keyframes pulse-dot {
@@ -627,6 +659,42 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 215, 0, 0.12);
   color: var(--headline-gold);
   border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.tile-badge.platform {
+  background: rgba(0, 40, 104, 0.3);
+  color: var(--sky-blue);
+  border: 1px solid rgba(0, 40, 104, 0.5);
+}
+
+.tile-badge.edu {
+  background: rgba(255, 215, 0, 0.12);
+  color: var(--headline-gold);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.tile-badge.music {
+  background: rgba(250, 70, 22, 0.15);
+  color: var(--gator-orange);
+  border: 1px solid rgba(250, 70, 22, 0.3);
+}
+
+.tile-badge.story {
+  background: rgba(250, 70, 22, 0.12);
+  color: #FF8866;
+  border: 1px solid rgba(250, 70, 22, 0.25);
+}
+
+.tile-badge.family {
+  background: rgba(135, 206, 235, 0.15);
+  color: var(--sky-blue);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+.tile-badge.screen {
+  background: rgba(135, 206, 235, 0.12);
+  color: var(--sky-blue);
+  border: 1px solid rgba(135, 206, 235, 0.25);
 }
 
 /* ============================================
@@ -1039,6 +1107,10 @@ img { max-width: 100%; display: block; }
 
 .tile.reserved.visible {
   opacity: 0.3;
+}
+
+.tile.building.visible {
+  opacity: 0.8;
 }
 
 /* credential counters */
